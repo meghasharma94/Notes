@@ -1,0 +1,29 @@
+Chapter 1 Notes : 
+What is microservices : - Microservices are small autonomous service that work together 
+Small and Focused on doing one thing  well : - With monolith , to add a new feature its difficult to know where to add the code as the codebase becomes larger ,
+boundaries break down , making fixing bugs or implementation is difficult 
+Cohesion :- the drive to have related code grouped together 
+Single Responsibility Principle - Gather Together those things that changes for the same reason and separate those things that change for different reasons
+All Communication between the services themselves are via the network calls and are exposed as an API - application programming interface and collaborating services communicate via those API's
+To do de-coupling well , you'll need to model your services right and get the API is right .
+With a system composed of multiple collaborating services we can decide to use different technologies inside each one. This allows us to pick the right tool for each job.
+Resilience : 
+	BulkHead - If one component fails in monolith service , everything stops working
+		- If one component fails , the failure doesn't cascade , you can isolate the problem and rest of the systems can carry on working. 
+Scaling : 
+   monolith - have to scale everything together , 
+ - With smaller services , we can scale only those that needs scaling allowing us to run other parts of the systems on smaller , less powerful hardware - on demand provisioning 
+
+Ease of deployment : bigger the delta between the release the higher the risk that will get something wrong 
+Organization Alignment : Microservices allows us to better align our architecture with the organizational goals , helping us minimize the number of people working on any codebase to hit the sweet spot of team size and productivity
+Composability : reuse of functionality 
+Optimizing for Replicability : Teams using microservices are flexible with completely rewriting services when required and killing the service when not needed.
+Service Oriented Architecture : is a design approach where multiple services collaborate to provide some end set of capabilities. It typically means a completely separate operating system.
+process. Communications between these services occurs via call across a network rather than method calls within a process boundary.
+- promote reusability of software
+Decomposition Technique : 
+Shared Libraries : - breaking codebase into multiple libraries 
+Drawbacks : 
+1) library typically has to be in same language / same platform
+2) cannot deploy a new library without redeploying the entire process 
+3) ease of scaling your system independently is curtailed
